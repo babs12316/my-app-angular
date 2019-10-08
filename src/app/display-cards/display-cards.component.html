@@ -1,0 +1,22 @@
+<p>name is {{name}}
+    test is {{test}}
+
+    
+</p>
+
+
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let title of titles">
+            <app-card [title]="title" (childEvent)="delete($event)"></app-card>
+        </div>
+
+    </div>
+    
+<ul>
+     <!--   <li *ngFor="let title of titles">
+           <app-card [title]="title"></app-card>
+        </li>
+      </ul>
+    -->
+
+      
