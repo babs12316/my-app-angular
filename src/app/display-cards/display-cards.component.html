@@ -6,8 +6,8 @@
 
 
     <div class="row">
-      <div class="col-sm-4" *ngFor="let title of titles">
-            <app-card [title]="title" (childEvent)="delete($event)"></app-card>
+      <div class="col-sm-4" *ngFor="let title of titles;  index as i">
+       <app-card [title]="title" (childEvent)="delete($event)"  [card_id]="i+1"></app-card>
         </div>
 
     </div>

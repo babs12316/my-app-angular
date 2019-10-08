@@ -11,13 +11,10 @@ export class DisplayCardsComponent implements OnInit {
   @Input() titles: string [];
   
 
-  delete(title:string){
-    console.log("hello"+title+"this title array is"+this.titles);
-  //  title = "'"+title+"'";
-    console.log("double quoted title is"+title);
-    this.titles = this.titles.filter(word => word != title);
-    console.log("result is"+this.titles);
-}
+  delete(card_id:number){
+    card_id=card_id-1;
+    this.titles.splice(card_id, 1);
+   }
  
   constructor() { }
 
