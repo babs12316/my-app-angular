@@ -9,7 +9,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class AddCardComponent {
   closeResult: string;
-  title:string;
+  title:string=null;
   titleArray: string[]= [ ];
   test:string;
 
@@ -18,11 +18,15 @@ export class AddCardComponent {
   open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
-      this.test="ddddd";
+     // this.test="ddddd";
       this.titleArray.push(this.title);
-      console.log("title is "+this.title+"title array is"+this.titleArray);
-      console.log("i am called");
+
+      this.title=null;
+    //  console.log("title is "+this.title+"title array is"+this.titleArray);
+      //console.log("i am called");
     }, (reason) => {
+      this.title=null;
+      console.log("i am closed");
        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
  }

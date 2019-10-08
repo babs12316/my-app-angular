@@ -1,13 +1,9 @@
-<p>name is {{name}}
-    test is {{test}}
 
-    
-</p>
-
+<app-sort (childEvent)="sort($event)"></app-sort>
 
     <div class="row">
       <div class="col-sm-4" *ngFor="let title of titles;  index as i">
-       <app-card [title]="title" (childEvent)="delete($event)"  [card_id]="i+1"></app-card>
+       <app-card [title]="title" (childEvent)="delete($event)"  [card_id]="i+1" ></app-card>
         </div>
 
     </div>

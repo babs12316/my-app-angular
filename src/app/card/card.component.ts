@@ -11,9 +11,7 @@ export class CardComponent implements OnInit {
   @Output() childEvent = new EventEmitter();
 
 
-  delete1(title:string){
-    this.childEvent.emit(this.title);
-}
+ 
 delete(card_id:number){
   this.childEvent.emit(this.card_id);
 }

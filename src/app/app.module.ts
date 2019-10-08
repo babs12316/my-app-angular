@@ -10,6 +10,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { DisplayCardsComponent } from './display-cards/display-cards.component';
 import { CardComponent } from './card/card.component';
+import { SortComponent } from './sort/sort.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -22,13 +25,17 @@ import { CardComponent } from './card/card.component';
     AddCardComponent,
     DisplayCardsComponent,
     CardComponent,
+    SortComponent,
+  
   ],
  
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
