@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-card',
@@ -9,36 +9,21 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class AddCardComponent {
   closeResult: string;
-  title:string=null;
-  titleArray: string[]= [ ];
-  test:string;
+  title: string = null;
+  titleArray: string[] = [];
+  test: string;
 
- constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
 
-  open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  open(content: any) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
-     // this.test="ddddd";
       this.titleArray.push(this.title);
-
-      this.title=null;
-    //  console.log("title is "+this.title+"title array is"+this.titleArray);
-      //console.log("i am called");
+      this.title = null;
     }, (reason) => {
-      this.title=null;
-      console.log("i am closed");
-       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      this.title = null;
     });
- }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    
-    }
   }
+
+
 }

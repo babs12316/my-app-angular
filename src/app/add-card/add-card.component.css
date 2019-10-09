@@ -1,10 +1,12 @@
-.add-card{
+.add-card {
     margin-top: 5%;
 }
-i.fas.fa-plus-circle{
-    font-size:30px;
-    float:right;
+
+i.fas.fa-plus-circle {
+    font-size: 30px;
+    float: right;
 }
-i.fas.fa-plus-circle:hover{
+
+i.fas.fa-plus-circle:hover {
     cursor: pointer;
 }

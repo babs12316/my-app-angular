@@ -1,8 +1,9 @@
-.single-card{
+.single-card {
     padding: 10px;
     border: 1px solid #ccc;
-    margin-top:5%;
+    margin-top: 5%;
 }
-.single-card:hover{
+
+.single-card:hover {
     cursor: pointer;
 }

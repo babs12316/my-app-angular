@@ -1,8 +1,8 @@
 table, td {
-    border: 1px solid black;
-    width:10%;
-  }
+  border: 1px solid black;
+  width: 10%;
+}
 
-  table td:hover{
-    cursor: pointer;
-  }
+table td:hover {
+  cursor: pointer;
+}

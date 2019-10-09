@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sort',
@@ -10,10 +10,9 @@ export class SortComponent implements OnInit {
   constructor() { }
 
   @Output() childEvent = new EventEmitter();
-sort(sorttype:string){
+  sort(sorttype: string) {
     this.childEvent.emit(sorttype);
-}
-
+  }
 
   ngOnInit() {
   }

@@ -1,7 +1,7 @@
-.top-nav{
-    background:#ccc;
- position: fixed;
+.top-nav {
+    background: #ccc;
+    position: fixed;
     width: 100%;
     top: 0px;
-  
+    padding: 5px;
 }
