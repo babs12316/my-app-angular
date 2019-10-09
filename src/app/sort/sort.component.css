@@ -1,5 +1,8 @@
 table, td {
     border: 1px solid black;
-    width:15%;
-    border-radius: 5px;
+    width:10%;
+  }
+
+  table td:hover{
+    cursor: pointer;
   }

@@ -5,3 +5,6 @@ i.fas.fa-plus-circle{
     font-size:30px;
     float:right;
 }
+i.fas.fa-plus-circle:hover{
+    cursor: pointer;
+}
