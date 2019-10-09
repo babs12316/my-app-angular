@@ -1,4 +1,5 @@
-table, th, td {
+table, td {
     border: 1px solid black;
-    width:50%;
+    width:15%;
+    border-radius: 5px;
   }
